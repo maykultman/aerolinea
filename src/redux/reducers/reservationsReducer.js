@@ -4,7 +4,7 @@ const initialState = {
 	data : {}
 };
 function reservation(state=initialState, action) {
-	console.log(action)
+	console.log(state.reservations)
 	switch (action.type){
 		case ADD_ITEM :
 			return {
@@ -20,11 +20,13 @@ function reservation(state=initialState, action) {
 				data: action.payload
 			}
 		case RESET_RESERVATION :
-			
 			return action.payload
 
 		case REMOVE_ITEM :
-			return state.filter(item=>item.id!==action.payload.id)
+			return {
+				...state,
+				reservations : state.reservations.filter(item=>item.id!==action.payload.id)
+			}
 		default: 
 			return state
 	}

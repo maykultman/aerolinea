@@ -8,7 +8,7 @@ import CheckoutForm from './CheckoutForm';
 import { formatMoney } from "../helpers";
 const Carrito = (props) => {
 	let list = [], total = 0;
-	let navigate = useNavigate();
+	
 	const { reservations } = props.reservations;
 	const [openModal, setOpenModal] = useState(false);
 	reservations.forEach((item, index) =>{

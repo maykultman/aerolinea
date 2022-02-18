@@ -18,9 +18,9 @@ const PurchaseForm = ({estados, addItem, dispatch}) => {
 		<form onSubmit={formik.handleSubmit} className="formFome">
 			<h3>Reserve su viaje</h3>
 			<label>Origen</label>
-			<MenuStates handleChange={formik.handleChange} estados={estados} name="origin"/>
+			<MenuStates handleChange={formik.handleChange} estados={estados} _value={formik.values.origin} name="origin"/>
 			<label>Destino</label>
-			<MenuStates handleChange={formik.handleChange} estados={estados} name="destino"/>
+			<MenuStates handleChange={formik.handleChange} estados={estados} _value={formik.values.destino} name="destino"/>
 			<div>
 				<label>Horarios</label>
 				{formik.values.destino&&<Hours hours={hours} handleChange={formik.handleChange}/>}

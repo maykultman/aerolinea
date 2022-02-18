@@ -187,7 +187,13 @@ input[type="submit"],
     cursor: no-drop;
   }
 }
-
+.error {
+  background: #f55;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 10px;
+}
 .hours-list{
   margin:10px 0px 0px 0px;
   padding: 10px 5px 0px 5px;

@@ -4,10 +4,10 @@ import * as yup from 'yup';
 import { initialDataUser } from "../initializerVars";
 
 let schema = yup.object().shape({
-	names: yup.string().required(),
-	lastName: yup.string().required(),
-	address: yup.string().required(),
-	email: yup.string().email()
+	names: yup.string().required('*'),
+	lastName: yup.string().required('*'),
+	address: yup.string().required('*'),
+	email: yup.string().email().required('*')
 });
 const CheckoutForm = (props) => {
 	let navigate = useNavigate();
@@ -19,6 +19,7 @@ const CheckoutForm = (props) => {
 			navigate('/gracias', { replace: true });
 		}
 	})
+	
 	return <>
 		<form onSubmit={formik.handleSubmit}>
 			<h3>Tus datos</h3>
@@ -28,7 +29,7 @@ const CheckoutForm = (props) => {
 					onChange={formik.handleChange}
 				></input>
 				<span>Nombre(s)</span>
-				{formik.errors.names ? <div>{formik.errors.names}</div>:null}
+				{formik.errors.names ? <div className="error">{formik.errors.names}</div>:null}
 			</label>
 			<label>
 				<input type="text" name="lastName" placeholder=" "
@@ -36,7 +37,7 @@ const CheckoutForm = (props) => {
 					onChange={formik.handleChange}
 				></input>
 				<span>Apellidos</span>
-				{formik.errors.lastName ? <div>{formik.errors.lastName}</div>:null}
+				{formik.errors.lastName ? <div className="error">{formik.errors.lastName}</div>:null}
 			</label>
 			<label>
 				<input type="text" name="address" placeholder=" "
@@ -44,7 +45,7 @@ const CheckoutForm = (props) => {
 					onChange={formik.handleChange}
 				></input>
 				<span>Dirección</span>
-				{formik.errors.address ? <div>{formik.errors.address}</div>:null}
+				{formik.errors.address ? <div className="error">{formik.errors.address}</div>:null}
 			</label>
 			<label>
 				<input type="text" name="email" placeholder=" "
@@ -52,13 +53,11 @@ const CheckoutForm = (props) => {
 					onChange={formik.handleChange}
 				></input>
 				<span>Correo electrónico</span>
-				{formik.errors.email ? <div>{formik.errors.email}</div>:null}
+				{formik.errors.email ? <div className="error">{formik.errors.email}</div>:null}
 			</label>
 			
-			{	formik.isValid?
-				<button type="submit">Finalizar</button>:
-				<div className="btn disabled">Finalizar</div>
-			}
+			<button type="submit">Finalizar</button>:
+			
 			<div className="close" onClick={()=>props.closeModal(false)}>x</div>
 		</form>
 	</>
