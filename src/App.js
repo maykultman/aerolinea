@@ -17,7 +17,7 @@ const App = () => {
 					<Provider store={store}>
 						<Menu/>
 						<Routes>
-							<Route path="/" element={<Home/>} />
+							<Route path="./" element={<Home/>} />
 							<Route path="carrito" element={<Carrito />} />
 							<Route path="gracias" element={<ThankPage/>} />
 						</Routes>

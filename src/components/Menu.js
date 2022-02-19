@@ -17,7 +17,7 @@ const Menu = (props) => {
 	<header className="App-header">
 		<div class="row">
 			<div className="xs-12 sm-6 md-6 lg-6">
-				<Link to="/" className="icon-app">
+				<Link to="./" className="icon-app">
 					<FaHtml5></FaHtml5>
 				</Link>
 			</div>
