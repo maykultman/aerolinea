@@ -9,3 +9,4 @@ export const formatMoney = (NumberFormat, total) => {
 		renderText={(value, props) => <div {...props}>{value}</div>}
 	/>
 }
+export const Diverror = (error) =>( error ? null:<div className="error">*</div>)

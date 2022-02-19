@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from 'yup';
 import { initialDataUser } from "../initializerVars";
-
 let schema = yup.object().shape({
 	names: yup.string().required('*'),
 	lastName: yup.string().required('*'),
@@ -13,7 +12,7 @@ const CheckoutForm = (props) => {
 	let navigate = useNavigate();
 	const formik = useFormik({
 		initialValues: initialDataUser, 
-		validationSchema:schema,
+		validationSchema: schema,
 		onSubmit : values => {
 			props.dispatch(props.addDataItem(values));
 			navigate('/gracias', { replace: true });

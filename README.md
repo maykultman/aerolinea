@@ -2,9 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Dowload dependencies...
+Download dependencies...
 
 ###  `npm install`
+
+Deploy...
+
+###  `yarn deploy`
 
 ## Available Scripts
 

@@ -443,8 +443,10 @@ input[type="submit"].disabled,
 }
 
 .error {
-  background: #f55;
-  color: #fff;
+  position: absolute !important;
+  top: 22px;
+  left: -17px;
+  color: #f55;
   display: inline-block;
   font-size: 12px;
   padding: 5px 10px;
