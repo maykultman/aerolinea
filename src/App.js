@@ -9,6 +9,7 @@ import Menu from './components/Menu';
 import Home from './components/Home';
 import Carrito from './components/ShoppingCart';
 import ThankPage from './components/ThankPage';
+import { ToastContainer } from 'react-toastify';
 const App = () => {
 	return (
 		<HashRouter>
@@ -22,6 +23,7 @@ const App = () => {
 						</Routes>
 					</Provider>
 				</div>
+				<ToastContainer position="top-left" autoClose={2000} hideProgressBar={false} closeOnClick/>
 		</HashRouter>
 	)
 }

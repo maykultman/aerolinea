@@ -55,7 +55,7 @@ const CheckoutForm = (props) => {
 				{formik.errors.email ? <div className="error">{formik.errors.email}</div>:null}
 			</label>
 			
-			<button type="submit">Finalizar</button>:
+			<button type="submit">Enviar</button>
 			
 			<div className="close" onClick={()=>props.closeModal(false)}>x</div>
 		</form>

@@ -18,9 +18,10 @@ const ThankPage = (props) => {
 		localStorage.removeItem('reservations');
 		navigate('/', { replace: false })
 	}
+	console.log(storage.data.names)
 	return <>
 	{
-		(storage.reservations.length>0)?
+		(storage.reservations.length>0&&storage.data.names)?
 		<div className="ticket-1">
 			<div className="row">
 			<div className="xs-12 sm-12 md-12 lg-12"><br/><br/>

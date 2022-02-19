@@ -3,6 +3,7 @@ import { getId } from "../helpers";
 import { hours, initialDataFlight } from "../initializerVars";
 import MenuStates from "./FormBuy/MenuStates"
 import Hours from "./FormBuy/Hours"
+import { toast } from 'react-toastify';
 import * as yup from 'yup';
 let schema = yup.object().shape({
 	origin: yup.string().required('*'),
@@ -17,6 +18,7 @@ const PurchaseForm = ({estados, addItem, dispatch}) => {
 		initialValues: initialDataFlight, 
 		validationSchema : schema,
 		onSubmit : values => {
+			toast.success(`El vuelo ${values.origin} - ${values.destino} se agregó al carrito`);
 			values.id = getId();
 			dispatch(addItem(values));
 			formik.resetForm();

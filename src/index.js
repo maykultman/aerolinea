@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'react-toastify/dist/ReactToastify.css';
 import './scss/grids.css';
 import './App.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
+
 
 ReactDOM.render(<React.StrictMode><App/></React.StrictMode>,document.getElementById('root'));
 

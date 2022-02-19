@@ -16,12 +16,12 @@ const Menu = (props) => {
 	{location.pathname!=='/gracias'?
 	<header className="App-header">
 		<div className="row">
-			<div className="xs-12 sm-6 md-6 lg-6">
+			<div className="xs-6 sm-6 md-6 lg-6">
 				<Link to="/" className="icon-app">
 					<FaHtml5></FaHtml5>
 				</Link>
 			</div>
-			<div className="xs-12 sm-6 md-6 lg-6 text-right">
+			<div className="xs-6 sm-6 md-6 lg-6 text-right">
 				<ul>
 					<li><Link to="/">Home</Link></li>
 					<li>
