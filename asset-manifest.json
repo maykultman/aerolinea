@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/aerolinea/static/css/main.e3d381eb.css",
-    "main.js": "/aerolinea/static/js/main.edf6aa84.js",
+    "main.js": "/aerolinea/static/js/main.0f18b53b.js",
     "static/js/787.bd3cc40e.chunk.js": "/aerolinea/static/js/787.bd3cc40e.chunk.js",
     "index.html": "/aerolinea/index.html",
     "main.e3d381eb.css.map": "/aerolinea/static/css/main.e3d381eb.css.map",
-    "main.edf6aa84.js.map": "/aerolinea/static/js/main.edf6aa84.js.map",
+    "main.0f18b53b.js.map": "/aerolinea/static/js/main.0f18b53b.js.map",
     "787.bd3cc40e.chunk.js.map": "/aerolinea/static/js/787.bd3cc40e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e3d381eb.css",
-    "static/js/main.edf6aa84.js"
+    "static/js/main.0f18b53b.js"
   ]
 }
