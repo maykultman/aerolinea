@@ -4,7 +4,6 @@ const initialState = {
 	data : {}
 };
 function reservation(state=initialState, action) {
-	console.log(state.reservations)
 	switch (action.type){
 		case ADD_ITEM :
 			return {

@@ -17,13 +17,13 @@ const Menu = (props) => {
 	<header className="App-header">
 		<div class="row">
 			<div className="xs-12 sm-6 md-6 lg-6">
-				<Link to="/aerolinea" className="icon-app">
+				<Link to="/" className="icon-app">
 					<FaHtml5></FaHtml5>
 				</Link>
 			</div>
 			<div className="xs-12 sm-6 md-6 lg-6 text-right">
 				<ul>
-					<li><Link to="aerolinea">Home</Link></li>
+					<li><Link to="/">Home</Link></li>
 					<li>
 						<Link to="carrito">Carrito</Link> 
 						{count>0?<span className="count">{count}</span>:null}

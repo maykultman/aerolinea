@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
 import {
-    BrowserRouter,
+    HashRouter,
 	Routes,
 	Route
   } from "react-router-dom";
@@ -11,19 +11,18 @@ import Carrito from './components/ShoppingCart';
 import ThankPage from './components/ThankPage';
 const App = () => {
 	return (
-		
-			<BrowserRouter>
+		<HashRouter>
 				<div className="App">
 					<Provider store={store}>
 						<Menu/>
 						<Routes>
-							<Route path="aerolinea" element={<Home/>} />
+							<Route path="/" element={<Home/>} />
 							<Route path="carrito" element={<Carrito />} />
 							<Route path="gracias" element={<ThankPage/>} />
 						</Routes>
 					</Provider>
 				</div>
-			</BrowserRouter>
+		</HashRouter>
 	)
 }
 export default App;

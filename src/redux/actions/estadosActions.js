@@ -3,7 +3,6 @@ export const FETCH_ESTADOS_SUCCESS = 'FETCH_ESTADOS_SUCCESS'
 export const FETCH_ESTADOS_ERROR = 'FETCH_ESTADOS_ERROR'
 
 export const fetchPosts = () => (dispatch) => {
-	
 	dispatch({ type : FETCH_ESTADOS_REQUEST })
 	const params = {
 		method: 'GET',
