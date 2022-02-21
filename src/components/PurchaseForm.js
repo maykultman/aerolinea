@@ -47,7 +47,7 @@ const PurchaseForm = ({estados, addItem, dispatch}) => {
 				/>
 				{formik.errors.passenger ? <div className="error">{formik.errors.passenger}</div>:null}
 			</div>
-			<button type="submit">Reservar</button>
+			<button type="submit">Agregar al carrito</button>
 		</form>
 	)
 }

@@ -23,7 +23,7 @@ const App = () => {
 						</Routes>
 					</Provider>
 				</div>
-				<ToastContainer position="top-left" autoClose={2000} hideProgressBar={false} closeOnClick/>
+				<ToastContainer position="top-left" autoClose={2000} hideProgressBar={true} closeOnClick/>
 		</HashRouter>
 	)
 }
