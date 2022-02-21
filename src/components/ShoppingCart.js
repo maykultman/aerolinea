@@ -7,12 +7,12 @@ import {initialStateReservation} from '../initializerVars';
 import NumberFormat from 'react-number-format';
 import CheckoutForm from './CheckoutForm';
 import { formatMoney } from "../helpers";
+import { toast } from 'react-toastify';
 const Carrito = (props) => {
 	let list = [], total = 0;
 	let navigate = useNavigate();
 	const { reservations } = props.reservations;
 	const [openModal, setOpenModal] = useState(false);
-	console.log(reservations);
 	if(reservations&&reservations.length>0){
 		reservations.forEach((item, index) =>{
 			total = total + (item.passenger*item.price);
@@ -30,7 +30,12 @@ const Carrito = (props) => {
 					</td>
 					<td>
 						<span className="actions">
-							<FaRegTrashAlt onClick={()=>props.dispatch(removeItem(item))}/>
+							<FaRegTrashAlt onClick={()=>{
+									const flight = item;
+									props.dispatch(removeItem(flight.id))
+									toast.success(`El vuelo ${flight.origin} - ${flight.destino}  ha sido eliminado del carrito`);
+								}}
+							/>
 						</span>
 					</td>
 				</tr>

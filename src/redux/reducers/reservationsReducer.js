@@ -1,5 +1,4 @@
 import {ADD_ITEM, ADD_DATA_ITEM, REMOVE_ITEM, RESET_RESERVATION} from '../actions/cartActions'
-import { toast } from 'react-toastify';
 const initialState = {
 	reservations : [],
 	data : {}
@@ -28,10 +27,9 @@ function reservation(state=initialState, action) {
 
 		case REMOVE_ITEM :
 			const flight = action.payload;
-			toast.success(`El vuelo ha sido ${flight.origin} - ${flight.destino} eliminado del carrito`);
 			return {
 				...state,
-				reservations : state.reservations.filter(item=>item.id!==action.payload.id)
+				reservations : state.reservations.filter(item=>item.id!==action.payload)
 			}
 		default: 
 			return state
